@@ -1,0 +1,59 @@
+body{
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;   /* 0 from top and bottom and from left and right(auto) */
+    padding: 0 16px;  /* 0 from top and bottom and from left and right(16) -means 16px b/w our bodt content and browser window*/
+
+    /* Moving footer at the bottom using Flex box  */
+    display: flex;
+    flex-direction: column;   /* default is row for flex-direction: ; */
+    min-height: 100vh;  /* 100% of the viewport height, vh stands for the view port height. veieport is the box where our content shows that is the browser box */
+}
+
+.main-content{
+    flex-grow: 1;  /* this element allow to grow to take up as much space as it needs */
+    /* we aregoing to set this to 1 whcih tells flex box that the main content should take up all leftover space */
+}
+
+footer{
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+    /* background: blue;
+    padding: 16px;  /* giving space b/w the content of the box and edge */
+    /* margin: 16px;margin will allow spacing outside i.e b/w box and the header links above */ 
+}
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a{/* target anchor element which is inside header element */
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait{
+    width: 250px;
+}
+
+input{
+    border: 1px solid #cccccc;
+    padding: 8px
+}
+
+button{
+    cursor: pointer ;
+    border:  1px solid #888888;
+    background:  #888888;
+    color: white;
+    padding: 8px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>404</title>
+        <link rel="icon" href="/img/weather.png" >   {{!-- To set the tab icon for weather page --}}
+       <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+        {{!-- <h1>{{title}}</h1> --}}   {{!-- if we want to inject a value in HBS file, we open and cose two curly braces --}}
+        <div class="main-content">
+            {{>header}}  {{!-- using header partials --}}
+            <p>{{errorMessage}}</p> 
+        </div>
+        
+        {{>footer}}
+    </body>
+</html>

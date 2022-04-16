@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png" >   {{!-- To set the tab icon for weather page --}}
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+        {{!-- <h1>{{title}}</h1> --}}   {{!-- if we want to inject a value in HBS file, we open and cose two curly braces --}}
+        <div class="main-content">
+            {{>header}}  {{!-- using header partials --}}
+
+            <p>Use this site to get your weather</p>
+            <form id="form">
+                <input id="search" placeholder="Location"/>
+                <button id="submit">Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+        
+        {{>footer}}  {{!-- this will be at the boottom that's why we have pushed otther things inside div and will use flex box --}}
+        <script src="/js/app.js"></script>   
+    </body>
+</html>
