@@ -19,8 +19,8 @@ weatherForm.addEventListener('submit',(e)=>{
         if(data.error){
             messageOne.textContent=data.error;
         }  else{
-            messageOne.textContent=data.Forecast;
             messageTwo.textContent=data.location;
+            messageOne.textContent=data.Forecast;
         }
     })
     
