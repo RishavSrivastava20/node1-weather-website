@@ -5,12 +5,15 @@ const messageTwo=document.querySelector('#message-2');
 
 
 weatherForm.addEventListener('submit',(e)=>{
-    messageOne.textContent='Loading...';
-    messageTwo.textContent='';
     e.preventDefault();//to prevent the default working of form
 
-    const location= search.value
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    const location= search.value;
+
+    messageOne.textContent='Loading...';
+    messageTwo.textContent='';
+    
+
+    fetch(`/weather?address=${location}`)
     .then((response)=>response.json())
     .then((data)=>{
         if(data.error){

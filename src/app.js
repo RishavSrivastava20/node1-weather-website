@@ -6,6 +6,7 @@ const express=require('express');//it is a npm module to create web servers
 const hbs=require('hbs');
 
 const app=express();
+const port=process.env.PORT || 3000;
 
 //Define paths for Express config
 const publicDirectoryPath=path.join(__dirname, '..', '/public');//to get to the public folder for index.html
@@ -116,6 +117,6 @@ app.get('*',(req,res)=>{  //--(*)- means match anything that hasn't been matched
     // res.send('My 404 page'); //Fopr the wild card character everything will be a match, so will keep this at the last
 })
 
-app.listen(3000,()=>{//3000 is a common development port
-    console.log('Server is up on port 3000.')
+app.listen(port,()=>{//3000 is a common development port
+    console.log('Server is up on port '+port);
 });
